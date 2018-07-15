@@ -1,0 +1,10 @@
+<h3>
+  ng keyup
+</h3>
+
+<div>
+  <label>Senha:</label>
+  <input #qtdSenha type="password" (keyup)="validaSenha(qtdSenha.value)" />
+  <button [disabled]="!habilitarBotao" (click)="gravarSenha(qtdSenha.value)" >Gravar Senha</button>
+</div>
+

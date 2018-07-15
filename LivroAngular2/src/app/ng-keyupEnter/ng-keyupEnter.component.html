@@ -1,0 +1,9 @@
+<p>
+  keyup.enter
+</p>
+
+<input type="text" #conteudo (keyup.enter)="adicionar(conteudo.value); conteudo.value=''" /> 
+
+<ul>
+  <li *ngFor="let item of valores" >{{item}}</li>
+</ul>

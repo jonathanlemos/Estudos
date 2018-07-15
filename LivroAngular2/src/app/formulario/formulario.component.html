@@ -1,0 +1,35 @@
+
+<h2>Formulário</h2>
+<form #cadastro="ngForm" (ngSubmit)="enviarDados()" >
+  <div>
+    <label for="nome" >Nome</label>
+    <input type="text" id="nome" [(ngModel)]="contato.nome" #nome="ngModel" name="nome" required />
+    <div [hidden]="nome.valid || nome.pristine" >
+      <p>O valor nome é obrigatório.</p>
+    </div>
+  </div>
+  <br>
+  <div #TodosContatos="ngModelGroup" ngModelGroup="TodosContatos" >
+    <div>
+      <label for="telefone">Telefone</label>
+      <input type="text" id="telefone" [(ngModel)]="contato.telefone" #telefone="ngModel" name="telefone" required />
+      <div *ngIf="telefone.invalid && telefone.dirty" >O número do telefone é obrigatório.</div>
+    </div>
+    <br>
+    <div>
+      <label for="email">Email</label>
+      <input type="text" id="email" [(ngModel)]="contato.email" #email="ngModel" name="email" >
+      <div [hidden]="email.pristine">
+          <p>O conteúdo foi modificado.</p>
+      </div>
+      <div *ngIf="email.touched">
+          <p>Clicou fora do campo.</p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <button type="submit" [disabled]="cadastro.form.invalid" >Enviar</button>
+</form>
+
+<p>{{TodosContatos}}</p>
+<p>{{TodosContatos.value | json}}</p>

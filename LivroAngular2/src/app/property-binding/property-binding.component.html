@@ -1,0 +1,9 @@
+<p>
+  Property Binding
+</p>
+
+<button (click)="mostrar()">Mostrar Paragrafo</button>
+
+<p [hidden]="!verParagrafo" >Paragrafo habilitado</p>
+<p bind-hidden="!verParagrafo" >Paragrafo habilitado 2</p>
+<p hidden="!verParagrafo" >Paragrafo habilitado 3</p>
