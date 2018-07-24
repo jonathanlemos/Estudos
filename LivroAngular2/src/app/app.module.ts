@@ -21,6 +21,9 @@ import { BlurComponent } from './blur/blur.component';
 import { InputOutputComponent } from './input-output/input-output.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { DiComponent } from './di/di.component';
+import { DadosUsuarioComponent } from './dados-usuario/dados-usuario.component';
+import { DetalheUsuarioComponent } from './detalhe-usuario/detalhe-usuario.component';
+import { ListaUsuarioComponent } from './lista-usuario/lista-usuario.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,10 @@ import { DiComponent } from './di/di.component';
     BlurComponent,
     InputOutputComponent,
     FormularioComponent,
-    DiComponent
+    DiComponent,
+    DadosUsuarioComponent,
+    DetalheUsuarioComponent,
+    ListaUsuarioComponent
   ],
   imports: [
     BrowserModule,
